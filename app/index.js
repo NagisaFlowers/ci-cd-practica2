@@ -4,7 +4,7 @@ const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('¡Hola desde CI/CD!');
-});
+}  // ← Falta esta llave de cierre
 
 app.listen(port, () => {
   console.log(`App escuchando en http://localhost:${port}`);

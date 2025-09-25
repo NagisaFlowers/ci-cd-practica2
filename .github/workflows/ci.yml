@@ -24,3 +24,9 @@ jobs:
       - name: Ejecutar pruebas
         run: npm test
         working-directory: ./app
+
+      - name: Construir imagen Docker
+        run: docker build -t mi-app-ci-cd ./app
+
+      - name: Ejecutar contenedor
+        run: docker run -d -p 3000:3000 mi-app-ci-cd
