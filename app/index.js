@@ -4,9 +4,9 @@ const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('¡Hola desde CI/CD!');
-});
+})
 
-// función mal escrita
-app.liste(port, () => {  // ← "liste" en lugar de "listen"
-  console.log(`App escuchando en http://localhost:${port}`);
-});
+// Falta el punto y coma y paréntesis
+app.listen(port, () => {
+  console.log(`App escuchando en http://localhost:${port}`)
+// Falta el paréntesis de cierre y punto y coma
